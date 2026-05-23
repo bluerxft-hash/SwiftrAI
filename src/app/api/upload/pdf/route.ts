@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     // Convert File to Buffer
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
-{ text: string; numpges: umber }
+
     // Parse PDF
     const data = await pdf(buffer) as any;
 
