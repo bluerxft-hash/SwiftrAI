@@ -35,7 +35,7 @@ export default function SignupPage() {
       } else if (result?.url) {
         router.push(result.url);
       } else {
-        router.push("/folders");
+        router.push("/app");
       }
     } catch (err) {
       console.error("Signup error:", err);
@@ -163,7 +163,7 @@ export default function SignupPage() {
 
             <button
               type="button"
-              onClick={() => signIn("google", { callbackUrl: "/folders" })}
+              onClick={() => signIn("google", { callbackUrl: "/app" })}
               className="mt-4 w-full flex items-center justify-center gap-2 border border-slate-200 rounded-lg py-2 px-4 text-sm font-medium text-slate-700 hover:bg-slate-50 transition"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24">

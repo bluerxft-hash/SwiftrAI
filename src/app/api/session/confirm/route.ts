@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
   await upsertCustomer(customer.customerId, customer.email);
 
   const response = NextResponse.redirect(
-    new URL("/app/podcast?welcome=1", appUrl)
+    new URL("/folders?welcome=1", appUrl)
   );
   response.cookies.set(CUSTOMER_COOKIE, customer.customerId, {
     httpOnly: true,
