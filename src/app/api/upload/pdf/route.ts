@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-// @ts-ignore
+// @ts-expect-error - pdf-parse doesn't have TypeScript definitions
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const pdf = require("pdf-parse");
 
 export async function POST(req: NextRequest) {
@@ -20,7 +21,7 @@ export async function POST(req: NextRequest) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Parse PDF
+    // Parse PDF{ text: string; numpges: umber }
     const data = await pdf(buffer) as any;
 
     // Extract text content

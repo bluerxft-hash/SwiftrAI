@@ -148,7 +148,7 @@ export async function generateFlashcards(noteTitle: string, noteContent?: string
           try {
             const parsed = JSON.parse(content);
             if (Array.isArray(parsed)) {
-              return parsed.map((card: any) => ({
+              return parsed.map((card: { front?: string; back?: string }) => ({
                 front: card.front || "Question",
                 back: card.back || "Answer",
               }));
@@ -207,7 +207,7 @@ export async function generateQuiz(noteTitle: string, noteContent?: string): Pro
           try {
             const parsed = JSON.parse(content);
             if (Array.isArray(parsed)) {
-              return parsed.map((q: any) => ({
+              return parsed.map((q: { question?: string; options?: string[]; answer?: number }) => ({
                 question: q.question || "Question",
                 options: Array.isArray(q.options) ? q.options : ["A", "B", "C", "D"],
                 answer: typeof q.answer === "number" ? q.answer : 0,
