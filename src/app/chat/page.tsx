@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { ChatInterface } from "@/components/ChatInterface";
 
-export default function ChatRedirect() {
-  redirect("/app/chat");
+export default function ChatPage() {
+  return <ChatInterface />;
 }
