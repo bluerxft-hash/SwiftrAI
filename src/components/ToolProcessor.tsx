@@ -206,7 +206,7 @@ export function ToolProcessor({
     } else {
       process(value);
     }
-  }, [uploadedFile, sourceType, value]);
+  }, [uploadedFile, sourceType, value, process, processWithAPI]);
 
   const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
