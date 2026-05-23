@@ -56,7 +56,7 @@ export default function HomePage() {
                 $5/month.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Link href="/app" className="btn-primary">
+                <Link href="/folders" className="btn-primary">
                   Start free
                   <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -127,7 +127,7 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/app" className="btn-secondary mt-8 w-full text-center">
+                <Link href="/folders" className="btn-secondary mt-8 w-full text-center">
                   Open free workspace
                 </Link>
               </div>

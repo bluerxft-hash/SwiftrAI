@@ -20,15 +20,15 @@ export function AppShell({
     <div className="flex min-h-screen bg-slate-50">
       <aside className="fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-swiftr-100 bg-white">
         <div className="border-b border-swiftr-100 px-4 py-4">
-          <Logo href="/app" />
+          <Logo href="/folders" />
           <p className="mt-2 text-xs text-slate-500">Turbo AI alternative</p>
         </div>
 
         <nav className="flex-1 overflow-y-auto px-3 py-4">
           <Link
-            href="/app"
+            href="/folders"
             className={`mb-1 flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition ${
-              pathname === "/app"
+              pathname === "/folders"
                 ? "bg-swiftr-brand-light text-swiftr-brand"
                 : "text-slate-600 hover:bg-slate-50"
             }`}

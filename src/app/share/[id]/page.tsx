@@ -2,23 +2,10 @@
 
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import { useNotes } from "@/hooks/useNotes";
 
-export default function SharedNotePage({ params }: { params: Promise<{ id: string }> }) {
-  return <SharedNoteContentWrapper params={params} />;
-}
-
-function SharedNoteContentWrapper({ params }: { params: Promise<{ id: string }> }) {
-  const [id, setId] = useState<string | null>(null);
-
-  useEffect(() => {
-    params.then(p => setId(p.id));
-  }, [params]);
-
-  if (!id) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
-
-  return <SharedNoteContent id={id} />;
+export default function SharedNotePage({ params }: { params: { id: string } }) {
+  return <SharedNoteContent id={params.id} />;
 }
 
 function SharedNoteContent({ id }: { id: string }) {
