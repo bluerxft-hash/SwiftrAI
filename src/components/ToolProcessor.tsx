@@ -1,7 +1,7 @@
 "use client";
 
 import { Loader2, Sparkles, Upload, Bot, Send, User, MessageSquare, FileText, Folder, FolderOpen, Plus } from "lucide-react";
-import { useState, useRef, useCallback, memo } from "react";
+import { useState, useRef, useCallback } from "react";
 import { generateNotesFromSource, type GeneratedNote } from "@/lib/generate";
 import { useNotes } from "@/hooks/useNotes";
 import Link from "next/link";

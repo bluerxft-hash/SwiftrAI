@@ -212,6 +212,7 @@ export async function generateQuiz(noteTitle: string, noteContent?: string): Pro
                 options: Array.isArray(q.options) ? q.options : ["A", "B", "C", "D"],
                 answer: typeof q.answer === "number" ? q.answer : 0,
               }));
+            }
           } catch {
             // Fall through to mock
           }
