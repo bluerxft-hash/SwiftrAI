@@ -30,7 +30,7 @@ export function ProGate({ featureName, description, isPro, children }: Props) {
       </p>
       <div className="mt-8 flex flex-col items-center gap-3">
         <SubscribeButton label="Unlock Pro — $5/month" />
-        <Link href="/app" className="text-sm font-medium text-swiftr-brand hover:underline">
+        <Link href="/folders" className="text-sm font-medium text-swiftr-brand hover:underline">
           ← Back to free tools
         </Link>
       </div>

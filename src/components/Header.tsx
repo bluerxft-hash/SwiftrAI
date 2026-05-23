@@ -19,12 +19,12 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-3">
           <Link
-            href="/app"
+            href="/folders"
             className="hidden text-sm font-medium text-slate-600 transition hover:text-swiftr-brand sm:inline"
           >
             Open app
           </Link>
-          <Link href="/app" className="btn-secondary text-sm hidden sm:inline-flex">
+          <Link href="/folders" className="btn-secondary text-sm hidden sm:inline-flex">
             Start free
           </Link>
           <a href="#pricing" className="btn-primary text-sm">
