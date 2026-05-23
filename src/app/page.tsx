@@ -127,7 +127,7 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/app" className="btn-secondary mt-8 w-full text-center">
+                <Link href="/folders" className="btn-secondary mt-8 w-full text-center">
                   Open free workspace
                 </Link>
               </div>

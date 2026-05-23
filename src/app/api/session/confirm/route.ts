@@ -9,12 +9,12 @@ export async function GET(req: NextRequest) {
   const appUrl = getAppUrl();
 
   if (!sessionId) {
-    return NextResponse.redirect(new URL("/app", appUrl));
+    return NextResponse.redirect(new URL("/folders", appUrl));
   }
 
   const customer = await getCustomerFromSession(sessionId);
   if (!customer) {
-    return NextResponse.redirect(new URL("/app", appUrl));
+    return NextResponse.redirect(new URL("/folders", appUrl));
   }
 
   await upsertCustomer(customer.customerId, customer.email);

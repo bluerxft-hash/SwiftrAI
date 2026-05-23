@@ -32,7 +32,7 @@ export default function LoginPage() {
       } else if (result?.url) {
         router.push(result.url);
       } else {
-        router.push("/app");
+        router.push("/folders");
       }
     } catch (err) {
       console.error("Login error:", err);
@@ -136,7 +136,7 @@ export default function LoginPage() {
 
             <button
               type="button"
-              onClick={() => signIn("google", { callbackUrl: "/app" })}
+              onClick={() => signIn("google", { callbackUrl: "/folders" })}
               className="mt-4 w-full flex items-center justify-center gap-2 border border-slate-200 rounded-lg py-2 px-4 text-sm font-medium text-slate-700 hover:bg-slate-50 transition"
             >
               <svg className="h-5 w-5" viewBox="0 0 24 24">
