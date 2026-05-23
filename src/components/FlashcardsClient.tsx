@@ -232,7 +232,7 @@ export function FlashcardsClient() {
               className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-red-100 text-red-700 hover:bg-red-200 transition font-medium"
             >
               <XCircle className="h-5 w-5" />
-              I didn't know this
+              I didn&apos;t know this
             </button>
           </div>
 

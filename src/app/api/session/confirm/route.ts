@@ -9,18 +9,18 @@ export async function GET(req: NextRequest) {
   const appUrl = getAppUrl();
 
   if (!sessionId) {
-    return NextResponse.redirect(new URL("/app", appUrl));
+    return NextResponse.redirect(new URL("/folders", appUrl));
   }
 
   const customer = await getCustomerFromSession(sessionId);
   if (!customer) {
-    return NextResponse.redirect(new URL("/app", appUrl));
+    return NextResponse.redirect(new URL("/folders", appUrl));
   }
 
   await upsertCustomer(customer.customerId, customer.email);
 
   const response = NextResponse.redirect(
-    new URL("/app?welcome=1", appUrl)
+    new URL("/folders?welcome=1", appUrl)
   );
   response.cookies.set(CUSTOMER_COOKIE, customer.customerId, {
     httpOnly: true,
